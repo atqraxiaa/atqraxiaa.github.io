@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>yourname · bio</title>
+<title>@nyxiariah · bio!</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <style>
@@ -167,7 +167,7 @@
 <video id="bg" src="bg.mp4" autoplay muted loop playsinline preload="auto"></video>
 <div class="vignette"></div>
 
-<div id="splash"><span>click to enter</span></div>
+<div id="splash"><span>click to enter...</span></div>
 
 <main>
   <section class="card" id="card">
@@ -220,7 +220,7 @@
 <script>
 
 const CONFIG = {
-  bioLines: ["just a person on the internet.", "builder · gamer · night owl", "welcome to my page ✦"],
+  bioLines: ["just a random user on the internet.", "welcome to my website! ✦"],
   accent:  "#9fd3f5",
   accent2: "#ff9a6b"
 };
@@ -247,14 +247,14 @@ async function typeLoop(){
 
 async function bumpViews(){
   const el = document.getElementById('views');
-  const KEY = 'nyxiariah-bio-q7k2m9x4'; // your own counter name, keep it random
+  const KEY = 'nyxiariah-bio-q7k2m9x4';
   let n = 0;
   try {
     const r = await fetch('https://countapi.mileshilliard.com/api/v1/hit/' + KEY);
     const d = await r.json();
     n = parseInt(d.value, 10) || 0;
   } catch (e) {}
-  if (!n) { // fallback if the counter service is down
+  if (!n) {
     try { n = parseInt(localStorage.getItem('views')||'0',10) + 1; localStorage.setItem('views', n); }
     catch (e) { n = 1; }
   }
